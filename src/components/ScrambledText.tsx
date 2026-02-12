@@ -14,6 +14,11 @@ export interface ScrambledTextProps {
   scrambleChars?: string;
   className?: string;
   style?: React.CSSProperties;
+  /** Optional horizontal line underneath. Pass lineClassName/lineStyle to customize. */
+  lineClassName?: string;
+  lineStyle?: React.CSSProperties;
+  /** Gap between text and line (e.g. 4, "0.25rem") — tweak until you lock in */
+  lineGap?: number | string;
   children: React.ReactNode;
 }
 
@@ -24,6 +29,9 @@ export function ScrambledText({
   scrambleChars = "X",
   className = "",
   style = {},
+  lineClassName,
+  lineStyle,
+  lineGap = 4,
   children,
 }: ScrambledTextProps) {
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -102,6 +110,17 @@ export function ScrambledText({
       style={style}
     >
       <p>{children}</p>
+      {(lineClassName != null || lineStyle != null) && (
+        <div
+          role="presentation"
+          aria-hidden
+          className={lineClassName}
+          style={{
+            marginTop: typeof lineGap === "number" ? `${lineGap}px` : lineGap,
+            ...lineStyle,
+          }}
+        />
+      )}
     </div>
   );
 }

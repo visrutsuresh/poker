@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import "./colours.generated.css";
 import "./globals.css";
 
 const satoshi = localFont({
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} ${cabinet.variable} bg-black font-sans antialiased`}
+        className={`${satoshi.variable} ${cabinet.variable} bg-colour1 font-sans antialiased`}
       >
         {children}
       </body>

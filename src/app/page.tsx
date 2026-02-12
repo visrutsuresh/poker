@@ -5,7 +5,7 @@ import { ScrambledText } from "@/components/ScrambledText";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-colour1">
       <div
         className="fixed"
         style={{ left: "50%", top: "150px", transform: "translateX(-50%)" }}
@@ -23,7 +23,9 @@ export default function Home() {
             radius={80}
             duration={0.6}
             speed={0.5}
-            className="font-display text-[100px] font-bold italic text-white"
+            className="font-display text-[100px] font-bold italic text-colour3"
+            lineClassName="h-px w-full bg-colour3 opacity-40"
+            lineGap={-15}
           >
             STRADDLER
           </ScrambledText>

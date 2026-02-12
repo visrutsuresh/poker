@@ -3,9 +3,15 @@
 @theme inline {
   --font-sans: var(--font-cabinet), system-ui, sans-serif;
   --font-display: var(--font-satoshi), system-ui, sans-serif;
+
+  /* Colour palette – values from src/lib/colours.json */
+  --color-colour1: var(--colour1);
+  --color-colour2: var(--colour2);
+  --color-colour3: var(--colour3);
+  --color-colour4: var(--colour4);
 }
 
 body {
-  background: black;
-  color: white;
+  background: var(--color-colour1);
+  color: var(--color-colour4);
 }

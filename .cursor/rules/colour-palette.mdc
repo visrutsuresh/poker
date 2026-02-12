@@ -1,0 +1,21 @@
+---
+description: Project colour palette – single source of truth
+alwaysApply: true
+---
+
+# Colour Palette
+
+Single source of truth: **src/lib/colours.json** – edit there, then run dev/build. The script regenerates colours.generated.css.
+
+Use this palette across the project:
+
+| Role | Hex | Usage |
+|------|-----|-------|
+| colour1 (background) | #1A120B | Page backgrounds |
+| colour2 (second) | #3C2A21 | Secondary surfaces |
+| colour3 (heading) | #D5CEA3 | Headings, accents |
+| colour4 (body text) | #E5E5CB | Body copy |
+
+**Tailwind:** `bg-colour1`, `text-colour3`, `border-colour2`, etc.
+
+**JS/TS:** Import from `@/lib/colours` for hex values.
