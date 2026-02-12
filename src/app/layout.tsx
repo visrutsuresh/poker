@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
+const satoshi = localFont({
+  src: [
+    { path: "../fonts/Satoshi-Variable.ttf", style: "normal" },
+    { path: "../fonts/Satoshi-VariableItalic.ttf", style: "italic" },
+  ],
+  variable: "--font-satoshi",
   display: "swap",
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+const cabinet = localFont({
+  src: "../fonts/CabinetGrotesk-Variable.ttf",
+  variable: "--font-cabinet",
   display: "swap",
 });
 
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${outfit.variable} bg-black font-sans antialiased`}
+        className={`${satoshi.variable} ${cabinet.variable} bg-black font-sans antialiased`}
       >
         {children}
       </body>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-sans: var(--font-satoshi), system-ui, sans-serif;
+  --font-display: var(--font-cabinet), var(--font-satoshi), system-ui, sans-serif;
+}
+
 body {
   background: black;
   color: white;
