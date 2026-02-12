@@ -88,7 +88,7 @@ export function ScrambledText({
 
         if (dist < radius) {
           gsap.to(c, {
-            overwrite: true,
+            overwrite: "auto",
             duration: duration * (1 - dist / radius),
             scrambleText: {
               text: c.dataset.content || "",
