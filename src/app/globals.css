@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-satoshi), system-ui, sans-serif;
-  --font-display: var(--font-cabinet), var(--font-satoshi), system-ui, sans-serif;
+  --font-sans: var(--font-cabinet), system-ui, sans-serif;
+  --font-display: var(--font-satoshi), system-ui, sans-serif;
 }
 
 body {
