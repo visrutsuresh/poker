@@ -24,8 +24,10 @@ export default function Home() {
             duration={0.6}
             speed={0.5}
             className="font-display text-[100px] font-bold italic text-colour3"
-            lineClassName="h-px w-full bg-colour3 opacity-40"
+            lineClassName="h-px w-full"
             lineGap={-15}
+            lineAnimation="shooting-star"
+            lineAnimationDuration={5}
           >
             STRADDLER
           </ScrambledText>
