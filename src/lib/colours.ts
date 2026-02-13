@@ -8,8 +8,8 @@
 import palette from "./colours.json";
 
 export const colours = palette as {
-  colour1: string;
-  colour2: string;
-  colour3: string;
-  colour4: string;
+  colour1: string; // background
+  colour2: string; // secondary background
+  colour3: string; // heading text
+  colour4: string; // text
 };
