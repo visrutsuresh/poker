@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-colour1">
       <div
         className="fixed"
-        style={{ left: "50%", top: "150px", transform: "translateX(-50%)" }}
+        style={{ left: "50%", top: "300px", transform: "translate(-50%, -50%)" }}
       >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
